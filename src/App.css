@@ -1,38 +1,56 @@
-.App {
+html, main{
+  font-family: 'Gill Sans', 'Gill Sans MT';
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#calculator {
+  border: 1px solid;
+  border-radius: 5px;
+  /* width: 400px;
+  height: 500px; */
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.resultField {
+  background-color: black;
+  color: #fff;
+  font-size: 3rem;
+  text-align: right;
+  padding-right: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#buttonArea {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+button {
+  text-align: center;
+  border: 1px solid;
+  border-radius: 1px;
+  height: 60px;
+  font-size: 2rem;
+}
+
+.operator {
+  border-color: grey;
+  color: #337cac
+}
+
+.clear {
+  background-color: #f0595f;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.equal {
+  height: 100%;
+  grid-area: 2/4/6/5;
+  background-color: #2e86c0;
+  color: white;
 }
